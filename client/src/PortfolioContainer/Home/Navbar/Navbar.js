@@ -4,7 +4,7 @@ import "./Navbar.css"; // Import the CSS file for styling
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleNavbar = () => {
+   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
 
@@ -13,7 +13,7 @@ export default function Navbar() {
       <div className="navbar-container">
         <h1>My Portfolio</h1>
         <div className="navbar-link">
-          <div className={isOpen ? "navbar-links open" : "navbar-links"}>
+           <div className={isOpen ? "navbar-links open" : "navbar-links"}>
             <ul>
               <li>
                 <a href="#home">Home</a>
@@ -32,7 +32,7 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
-          <div className="hamburger-menu" onClick={toggleNavbar}>
+           <div className="hamburger-menu" onClick={toggleNavbar}>
             <div className={isOpen ? "line open" : "line"}></div>
             <div className={isOpen ? "line open" : "line"}></div>
             <div className={isOpen ? "line open" : "line"}></div>
