@@ -32,7 +32,7 @@ a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  transition: color 0.3s ease; /* Add transition for smooth color change */
+  transition: color 0.3s ease;  
 }
 
 a:hover {
@@ -71,7 +71,7 @@ h1 {
   }
 }
 .hamburger-menu {
-  display: none; /* Initially hide the hamburger menu on larger screens */
+  display: none; 
 }
 
 @media only screen and (max-width: 768px) {
@@ -81,7 +81,7 @@ h1 {
   }
 
   .navbar-links {
-    display: none; /* Hide the links initially on smaller screens */
+    display: none;  
     width: 100%;
   }
 
@@ -90,6 +90,8 @@ h1 {
     flex-direction: column;
     justify-content: space-around;
     width: 30px;
+    margin-left: 25px;
+
     height: 24px;
     cursor: pointer;
   }
@@ -114,6 +116,6 @@ h1 {
   }
 
   .navbar-links.open {
-    display: block; /* Show the links when the hamburger menu is clicked */
+    display: block;  
   }
 }

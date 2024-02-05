@@ -12,6 +12,7 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;  
   justify-content: space-between;
   align-items: center;
 }
@@ -20,30 +21,32 @@
   background-image: url('../../assets/Home/profilephoto.jpg');
   background-size: contain;
   background-repeat: no-repeat;
-  width: 350px;
+  width: 100%; 
+  max-width: 350px;
   height: 300px;
   border-radius: 50px;
+  margin-left: 20px;  
 }
+ 
 
 .footer-middle {
   flex: 1;
   text-align: center;
-  display: flex;
-  flex-direction: column; /* Make it a column layout */
-  align-items: center; /* Center align items horizontally */
+  margin-top: 20px;  
 }
 
 .footer-icons {
-  text-align: right;
+  text-align: center;  
+  margin-top: 20px;  
 }
 
 .custom-icon {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;  
 }
 
 .custom-icon a {
-  margin-left: 10px;
+  margin: 0 10px;  
 }
 
 .custom-icon i {
@@ -59,40 +62,34 @@
   margin-top: 20px;
 }
 
- 
-.footer-icons h2 {
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 60px;
-  position: relative;
-}
-
-.footer-icons  h2::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  width: 150px;
-  height: 2px;
-  background-color: #ff4500;
-  transform: translateX(-50%);
-}
+.footer-icons h2,
 .footer-middle h2 {
   font-size: 22px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px; 
   position: relative;
 }
 
-.footer-middle  h2::after {
+.footer-icons h2::after,
+.footer-middle h2::after {
   content: '';
   position: absolute;
   bottom: -5px;
   left: 50%;
-  width: 150px;
+  width: 100px;  
   height: 2px;
   background-color: #ff4500;
   transform: translateX(-50%);
+}
+
+ @media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;  
+  }
+
+  .footer-middle,
+  .footer-icons {
+    width: 100%; 
+  }
 }
