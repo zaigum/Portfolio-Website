@@ -4,8 +4,15 @@ import "./Navbar.css"; // Import the CSS file for styling
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-   const toggleNavbar = () => {
+  const toggleNavbar = () => {
     setIsOpen(!isOpen);
+  };
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   return (
@@ -13,26 +20,26 @@ export default function Navbar() {
       <div className="navbar-container">
         <h1>My Portfolio</h1>
         <div className="navbar-link">
-           <div className={isOpen ? "navbar-links open" : "navbar-links"}>
+          <div className={isOpen ? "navbar-links open" : "navbar-links"}>
             <ul>
               <li>
-                <a href="#home">Home</a>
+                <a href="#home" onClick={() => scrollToSection("home")}>Home</a>
               </li>
               <li>
-                <a href="#about">About Me</a>
+                <a href="#about" onClick={() => scrollToSection("about")}>About Me</a>
               </li>
               <li>
-                <a href="#resume">Resume</a>
+                <a href="#resume" onClick={() => scrollToSection("resume")}>Resume</a>
               </li>
               <li>
-                <a href="#testimonial">Testimonial</a>
+                <a href="#testimonial" onClick={() => scrollToSection("testimonial")}>Testimonial</a>
               </li>
               <li>
-                <a href="#contact">Contact Me</a>
+                <a href="#contact" onClick={() => scrollToSection("contact")}>Contact Me</a>
               </li>
             </ul>
           </div>
-           <div className="hamburger-menu" onClick={toggleNavbar}>
+          <div className="hamburger-menu" onClick={toggleNavbar}>
             <div className={isOpen ? "line open" : "line"}></div>
             <div className={isOpen ? "line open" : "line"}></div>
             <div className={isOpen ? "line open" : "line"}></div>

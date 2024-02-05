@@ -5,7 +5,7 @@ import './Home.css';
 
 export default function Home() {
   return (
-    <div className='Home-container'>
+    <div  id="home" className='Home-container'>
       <Profile />
       <Footer />
     </div>

@@ -3,7 +3,7 @@ import "./AboutMe.css";
 
 export default function AboutMe() {
   return (
-    <div className="about-me-container">
+<div id="about" className="about-me-container">
       <div className="image-container">
         {/* Keep the image as a background in CSS */}
       </div>

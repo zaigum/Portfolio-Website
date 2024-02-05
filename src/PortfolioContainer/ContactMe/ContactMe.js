@@ -5,7 +5,7 @@ import Typical from "react-typical";
 
 const ContactMe = () => {
   return (
-    <div className="heading">
+    <div id="contact" className="heading">
       <h2>Contact Me</h2>
 
       <div className="contact-container">

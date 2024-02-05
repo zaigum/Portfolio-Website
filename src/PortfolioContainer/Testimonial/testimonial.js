@@ -7,7 +7,7 @@ import testimonial2 from "../../assets//Home/profilephoto.jpg";
 
 const Testimonial = () => {
   return (
-    <div className="testimonial-container">
+<div id="testimonial" className="testimonial-container">
       <h2>Testimonials</h2>
 
       <div className="testimonial-content">
