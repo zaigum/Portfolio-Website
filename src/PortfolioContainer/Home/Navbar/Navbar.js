@@ -18,7 +18,14 @@ export default function Navbar() {
   return (
     <nav className="Navbar">
       <div className="navbar-container">
-        <h1>My Portfolio</h1>
+        <div className="header-container">
+          <h1>My Portfolio</h1>
+          <div className="hamburger-menu" onClick={toggleNavbar}>
+            <div className={isOpen ? "line open" : "line"}></div>
+            <div className={isOpen ? "line open" : "line"}></div>
+            <div className={isOpen ? "line open" : "line"}></div>
+          </div>
+        </div>
         <div className="navbar-link">
           <div className={isOpen ? "navbar-links open" : "navbar-links"}>
             <ul>
@@ -38,11 +45,6 @@ export default function Navbar() {
                 <a href="#contact" onClick={() => scrollToSection("contact")}>Contact Me</a>
               </li>
             </ul>
-          </div>
-          <div className="hamburger-menu" onClick={toggleNavbar}>
-            <div className={isOpen ? "line open" : "line"}></div>
-            <div className={isOpen ? "line open" : "line"}></div>
-            <div className={isOpen ? "line open" : "line"}></div>
           </div>
         </div>
       </div>
