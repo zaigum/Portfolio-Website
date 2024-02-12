@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "./Navbar.css"; // Import the CSS file for styling
-
+import "./Navbar.css";  
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -19,33 +18,46 @@ export default function Navbar() {
     <nav className="Navbar">
       <div className="navbar-container">
         <div className="header-container">
-          <h1>My Portfolio</h1>
-          <div className="hamburger-menu" onClick={toggleNavbar}>
-            <div className={isOpen ? "line open" : "line"}></div>
-            <div className={isOpen ? "line open" : "line"}></div>
-            <div className={isOpen ? "line open" : "line"}></div>
-          </div>
+          <h1 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>My Portfolio</h1>
         </div>
         <div className="navbar-link">
           <div className={isOpen ? "navbar-links open" : "navbar-links"}>
             <ul>
               <li>
-                <a href="#home" onClick={() => scrollToSection("home")}>Home</a>
+                <a href="#home" onClick={() => scrollToSection("home")}>
+                  Home
+                </a>
               </li>
               <li>
-                <a href="#about" onClick={() => scrollToSection("about")}>About Me</a>
+                <a href="#about" onClick={() => scrollToSection("about")}>
+                  About Me
+                </a>
               </li>
               <li>
-                <a href="#resume" onClick={() => scrollToSection("resume")}>Resume</a>
+                <a href="#resume" onClick={() => scrollToSection("resume")}>
+                  Resume
+                </a>
               </li>
               <li>
-                <a href="#testimonial" onClick={() => scrollToSection("testimonial")}>Testimonial</a>
+                <a
+                  href="#testimonial"
+                  onClick={() => scrollToSection("testimonial")}
+                >
+                  Testimonial
+                </a>
               </li>
               <li>
-                <a href="#contact" onClick={() => scrollToSection("contact")}>Contact Me</a>
+                <a href="#contact" onClick={() => scrollToSection("contact")}>
+                  Contact Me
+                </a>
               </li>
             </ul>
           </div>
+        </div>
+        <div className="hamburger-menu" onClick={toggleNavbar}>
+          <div className={isOpen ? "line open" : "line"}></div>
+          <div className={isOpen ? "line open" : "line"}></div>
+          <div className={isOpen ? "line open" : "line"}></div>
         </div>
       </div>
     </nav>
